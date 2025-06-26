@@ -1,5 +1,5 @@
 export async function registerUser(username, password) {
-  const res = await fetch("http://localhost:3000/users/register", {
+  const res = await fetch("https://book-haven-app-be.onrender.com/users/register", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ username, password }),
@@ -10,7 +10,7 @@ export async function registerUser(username, password) {
 }
 
 export async function loginUser(username, password) {
-  const res = await fetch("http://localhost:3000/users/login", {
+  const res = await fetch("https://book-haven-app-be.onrender.com/users/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ username, password }),
@@ -23,7 +23,7 @@ export async function loginUser(username, password) {
 export async function fetchMe() {
   const token = localStorage.getItem("token");
 
-  const res = await fetch("http://localhost:3000/users/me", {
+  const res = await fetch("https://book-haven-app-be.onrender.com/users/me", {
     headers: {
       Authorization: `Bearer ${token}`,
     },

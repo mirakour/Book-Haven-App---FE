@@ -1,7 +1,7 @@
 export async function placeOrder(date, note, bookId, quantity) {
   const token = localStorage.getItem("token");
 
-  const res = await fetch("http://localhost:3000/orders", {
+  const res = await fetch("https://book-haven-app-be.onrender.com/orders", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -21,7 +21,7 @@ export async function placeOrder(date, note, bookId, quantity) {
 export async function fetchOrders() {
   const token = localStorage.getItem("token");
 
-  const res = await fetch("http://localhost:3000/orders", {
+  const res = await fetch("https://book-haven-app-be.onrender.com/orders", {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -34,7 +34,7 @@ export async function fetchOrders() {
 export async function cancelOrder(orderId) {
   const token = localStorage.getItem("token");
 
-  const res = await fetch(`http://localhost:3000/orders/${orderId}`, {
+  const res = await fetch(`https://book-haven-app-be.onrender.com/orders/${orderId}`, {
     method: "DELETE",
     headers: {
       Authorization: `Bearer ${token}`,
