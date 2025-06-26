@@ -27,7 +27,7 @@ Copy
 Edit
 src/
 ├── api/               # API helper functions
-├── assets/            # Static assets (optional)
+├── assets/            # Static assets 
 ├── components/        # Shared components (NavBar, ProtectedRoute)
 ├── pages/             # Page-level views (Books, BookDetails, Login, Register, Account)
 ├── App.jsx            # Main layout with routing
